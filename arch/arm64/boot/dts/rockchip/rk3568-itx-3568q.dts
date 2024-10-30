@@ -35,6 +35,10 @@
     model = "ITX-3568Q HDMI (Linux)";
     compatible = "rockchip,rk3568-firefly-itx-3568q", "rockchip,rk3568";
 
+    chosen: chosen {
+        bootargs = "earlycon=uart8250,mmio32,0xfeb50000 console=ttyFIQ0 coherent_pool=1m irqchip.gicv3_pseudo_nmi=0";
+    };
+
     	rgb0_panel {
 			status = "okay";
 			compatible = "simple-panel";
